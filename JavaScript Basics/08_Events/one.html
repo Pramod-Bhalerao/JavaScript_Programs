@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color:rgb(7, 7, 7); color: white;">
+    <h2>HD Background Images</h2>
+    <div>
+        <ul id="images">
+            <li style="display: inline-block;"><img width="300px" id="shark"
+                    src="https://images.pexels.com/photos/4666748/pexels-photo-4666748.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="">
+            </li>
+            <li style="display: inline-block;"><img width="600px" id="dolphin"
+                    src="https://images.pexels.com/photos/64219/dolphin-marine-mammals-water-sea-64219.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('shark').addEventListener('click', function (e) {
+    //     console.log("Clicked on shark !!!");
+    //     e.stopPropagation()
+    // })
+
+    // document.getElementById('images').addEventListener('click', function (e) {  
+    //     console.log("Clicked on items");
+    // })
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            let removeIT = e.target.parentNode
+            removeIT.remove()
+        }
+    })
+</script>
+
+</html>

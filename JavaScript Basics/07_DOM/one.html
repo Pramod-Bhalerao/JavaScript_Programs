@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+
+<body style="background-color: black; color: rgb(233, 12, 204);">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+</body>
+<Script>
+    // Function to add a programming language to the list
+    function addLang(langname) {
+        const li = document.createElement('li');  // Create a new list item element
+        li.innerHTML = `${langname}`;  // Set its content to the provided language name
+        document.querySelector('.language').appendChild(li);  // Append the list item to the 'language' class element
+    }
+
+    // Adding three languages using the addLang function
+    addLang('Python');
+    addLang('CSharp');
+    addLang('Golang');
+
+    // Function to add a programming language using text node
+    function addOptiLang(langname) {
+        const li = document.createElement('li');  // Create a new list item element
+        li.appendChild(document.createTextNode(langname));  // Append a text node with the provided language name
+        document.querySelector('.language').appendChild(li);  // Append the list item to the 'language' class element
+    }
+
+    // Adding two languages using the addOptiLang function
+    addOptiLang('Html');
+    addOptiLang('java');
+
+    // Editing 'li' with help of outerHTML
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li> Cascading Style Sheet </li>'
+
+    // Removing elements from 'li'
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</Script>
+
+</html>
