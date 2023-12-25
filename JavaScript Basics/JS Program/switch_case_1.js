@@ -11,6 +11,6 @@ switch (athleteFinalPosition) {
     console.log("You get the bronze medal!");
     break;
   default:
-    console.log("No medal awarded.");
+    console.log("No Medal Awarded");
     break;
 }
