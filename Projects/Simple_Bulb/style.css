@@ -12,4 +12,10 @@ button {
   font-size: 20px;
   margin: 50px;
   margin-left: 49%;
+  background-color: cadetblue;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
 }
